@@ -1,0 +1,12 @@
+:root {
+  --primary-color: red;
+  --secondary-color: blue;
+  --tertiary-color: green;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+
