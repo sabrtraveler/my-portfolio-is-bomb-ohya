@@ -1,12 +1,115 @@
 :root {
-  --primary-color: red;
-  --secondary-color: blue;
-  --tertiary-color: green;
+  --primary-color: rgb(34, 131, 187);
+  --secondary-color: black;
+  --third-color: gold;
+  --tertiary-color: silver;
 }
 
 * {
   box-sizing: border-box;
 }
 
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--tertiary-color);
+  background-color: var(--secondary-color);
+}
+
+/* header/navbar style start */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  
+}
+
+header nav ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+}
+
+header nav ul li a {
+  margin: 20px;
+  text-decoration: none;
+  font-size: 20px;
+  color: var(--third-color);
+  
 
 
+  
+}
+
+/* header/navbar style end */
+
+.hero-intro,
+.section {
+  margin: 100px 400px;
+
+  
+}
+
+.hero h1 {
+  color: gold;
+  font-size: 15px;
+}
+
+.hero h2 {
+  font-size: 50px;
+  line-height: 15px;
+  
+}
+
+.hero h3 {
+  font-size: 40px;
+  opacity: 50%;
+  color: var(--primary-color);
+
+}
+
+
+
+#about-me {
+  display: flex;
+
+}
+
+#about-me img {
+  width: 200px;
+  height: 200px;
+  margin-left: 110px;
+}
+
+
+
+.section-header {
+  font-size: 35px;
+  color: var(--primary-color);
+  
+}
+p {
+  width: 500px;
+}
+
+.project-box {
+  display: flex;
+}
+
+.project-box img {
+  width: 350px;
+  height: 200px;
+  margin: 10px 10px;
+  border: 5px solid var(--tertiary-color);
+  
+}
+
+#first-project-box img {
+  width: 800px;
+  height: 400px;
+}
+
+/* contact-form start */
+.contact-form a {
+  text-decoration: none;
+}
