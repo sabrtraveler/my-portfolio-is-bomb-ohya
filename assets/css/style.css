@@ -13,13 +13,27 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   color: var(--tertiary-color);
   background-color: var(--secondary-color);
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
 }
 
 /* header/navbar style start */
 header {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  padding: 15px 65px 15px 0;
 
   
 }
@@ -32,84 +46,226 @@ header nav ul {
 
 header nav ul li a {
   margin: 20px;
+  padding: 5px 10px;
   text-decoration: none;
   font-size: 20px;
   color: var(--third-color);
-  
-
-
-  
 }
+  
+
+  
+
 
 /* header/navbar style end */
+.hero {
+  padding: 2% 6%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
 
-.hero-intro,
-.section {
-  margin: 100px 400px;
-
-  
 }
+
+
+.hero div {
+  flex: 0 0 90%; }
 
 .hero h1 {
   color: gold;
-  font-size: 15px;
+  font-size: 20px;
 }
 
 .hero h2 {
-  font-size: 50px;
-  line-height: 15px;
+  font-size: 60px;
   
 }
 
 .hero h3 {
-  font-size: 40px;
-  opacity: 50%;
+  font-size: 50px;
+  opacity: 40%;
   color: var(--primary-color);
 
 }
 
 
 
-#about-me {
-  display: flex;
-
-}
-
 #about-me img {
   width: 200px;
   height: 200px;
-  margin-left: 110px;
+  margin-top: 15px;
+  border: 2px solid var(--tertiary-color);
 }
 
+main {
+  margin-top: 20px;
+  margin-bottom: 45px;
+}
 
+.page-wrapper {
+  max-width: 88%;
+  margin-left: auto;
+  margin-right: auto;
+}
 
-.section-header {
+.page-section {
+  margin: 25px 0;
+  padding: 10px 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: space-between;
+}
+
+.page-section > h2 {
+  flex: 0 0 20%;
+  text-align: right;
+  padding-right: 15px;
+  border-right: 4px solid var(--primary);
+  font-size: 4vw;
+  line-height: 1.1;
+}
+
+h2 {
   font-size: 35px;
   color: var(--primary-color);
   
 }
 p {
-  width: 500px;
+  margin: 0px;
 }
 
-.project-box {
+.flex-container {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.project-box img {
-  width: 350px;
-  height: 200px;
-  margin: 10px 10px;
-  border: 5px solid var(--tertiary-color);
-  
+.flex-item {
+  border: 5px solid var(--secondary);
+  background-color: var(--primary);
+  color: var(--tertiary);
+  min-height: 150px;
+  max-height: 150px;
+  flex-basis: calc(50% - 1em);
+  display: flex;
+  align-items: flex-end;
+  padding: 0 0 20px 0;
+  margin: 0.5em;
+  text-decoration: none;
+  background-blend-mode: soft-light;
+  background-size: 150%;
+  transition: all 0.5s;
+  font-size: 0.9rem;
 }
 
-#first-project-box img {
-  width: 800px;
-  height: 400px;
+/* feature first portfolio item */
+.flex-item:first-child {
+    min-height: 400px;
+    flex-basis: 100%;
 }
+
+.flex-item:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.flex-item div {
+  background-color: var(--secondary);
+  padding: 8px 10px;
+}
+
+.flex-item h3 {
+  font-size: 1.6rem;
+}
+
+/* portfolio project images */
+.run-buddy {
+  background-image: url("../images/02-run-buddy.jpg");
+}
+
+.led-wall {
+  background-image: url("../images/02-portfolio-1.jpg");
+}
+
+.react-calc {
+  background-image: url("../images/02-portfolio-2.jpg");
+}
+
+.pastel-puzzles {
+  background-image: url("../images/02-portfolio-3.jpg");
+}
+
+.surf-report {
+  background-image: url("../images/02-portfolio-4.jpg");
+}
+
+
 
 /* contact-form start */
-.contact-form a {
+
+.contact address {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+}
+
+.contact address a {
+  color: var(--tertiary);
+  padding: 5px;
   text-decoration: none;
+  font-size: 1.3rem;
+  font-style: normal;
+  display: inline-block;
+}
+
+@media screen and (max-width: 980px) {
+  header {
+    padding: 0 0 10px 0;
+    justify-content: center;
+    text-align: center;
+  }
+
+  header h1 {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+    font-size: 10vw;
+  }
+
+  header nav {
+    justify-content: center;
+  }
+
+
+
+  .page-section > h2 {
+    border-right: none;
+    border-bottom: 4px solid var(--primary);
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    text-align: left;
+    font-size: 7vw;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .flex-item,
+  .flex-item:first-child {
+    flex-basis: 100%;
+  }
+
+  .flex-item:first-child {
+    min-height: 150px;
+  }
+
+  .hero-banner {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .contact address {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
