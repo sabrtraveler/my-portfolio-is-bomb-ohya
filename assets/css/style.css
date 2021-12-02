@@ -102,6 +102,13 @@ header nav ul li {
   background-size: 100%;
 }
 
+.project div {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--primary-color);
+  width: 180px;
+}
+
 
 
 /* portfolio project images */
