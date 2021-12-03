@@ -6,6 +6,12 @@
   --tertiary-color: silver;
 }
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   margin: 20px;
   background-color: var(--secondary-color);
@@ -13,33 +19,37 @@ body {
 
 h1 {
   font-size: 25px;
+  color: var(--third-color);
 }
 
 h2 {
-  font-size: 35px;
+  font-size: 45px;
   color: var(--primary-color);
+  margin-bottom: 20px;
+  margin-top: 5px;
 }
 
 h3 {
-  font-size: 20px;
+  font-size: 40px;
+  margin-bottom: 10px;
 }
 
 p {
   font-size: 16px;
+  margin-bottom: 20px;
 }
 
 a {
   text-decoration: none;
   font-size: 20px;
+  color: var(--third-color);
 }
 a:hover {
   opacity: 0.7;
 }
 
-h1,
 h3,
-p,
-a {
+p {
   color: var(--tertiary-color);
 }
 
@@ -56,10 +66,12 @@ header {
 
 header nav ul {
   display: flex;
+  margin-right: 200px;
+  flex-wrap: wrap;
 }
 
 header nav ul li {
-  margin: 0px 25px;
+  margin: 0px 40px;
 }
 
 .hero-intro {
@@ -77,6 +89,8 @@ header nav ul li {
 #about-me img {
   height: 200px;
   width: 200px;
+  border: 2px solid var(--third-color);
+  margin-bottom: 80px;
 }
 
 /* portfolio section start */
@@ -84,31 +98,38 @@ header nav ul li {
 .flex-container {
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: 80px;
+  padding: 8px 10px;
 }
 
 .meditation {
-  width: 100%;
+  flex-basis: 100%;
   
 }
 
 .tic, .calculator, .weather, .run {
-  width: 50%;
+  flex-basis: 50%;
   
 }
 
 .project {
-  height: 400px;
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
+  background-position: center;
+  display: flex;
 }
 
 .project div {
-  display: flex;
-  flex-direction: column;
   background-color: var(--primary-color);
-  width: 180px;
+  padding: 30px 30px;
+  margin-bottom: 200px;
+  
+
 }
 
+.meditation div {
+  margin-bottom: 300px;
+}
 
 
 /* portfolio project images */
@@ -133,3 +154,68 @@ header nav ul li {
 }
 
 /* end portfolio project images */
+
+/* contact me section start */
+
+address {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+address a {
+  margin-right: 40px;
+}
+
+/* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
+@media screen and (max-width: 980px) {
+header nav ul {
+  margin-right: 0px;
+}
+
+h3 {
+  font-size: 30px;
+ }
+
+section {
+  margin: 0px 100px;
+}
+
+.section-heading {
+  text-align: center;
+}
+
+/* MEDIA QUERY FOR TABLETS AND SMALLER */
+@media screen and (max-width: 768px) {
+  address {
+    display: flex;
+    flex-direction: column;
+  }
+
+  address a {
+    padding: 15px 0px;
+    text-align: center;
+  }
+
+  .tic, .calculator, .weather, .run {
+    flex-basis: 100%;
+  }
+  
+
+}
+/* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
+@media screen and (max-width: 575px) {
+  section {
+    margin: 0px 50px;
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+  }
+
+  h1 {
+    margin-top: 25px;
+  }
+
+}
+}
