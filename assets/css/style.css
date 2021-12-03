@@ -57,15 +57,24 @@ section {
   margin: 0px 200px;
 }
 
-/*header/navigation section start*/
-header {
+header,
+header nav ul,
+.hero-intro,
+#about-me,
+.flex-container,
+.project,
+address
+{
   display: flex;
+}
+
+/* header/navigation section start */
+header {
   justify-content: space-between;
   align-items: center;
 }
 
 header nav ul {
-  display: flex;
   margin-right: 200px;
   flex-wrap: wrap;
 }
@@ -75,14 +84,12 @@ header nav ul li {
 }
 
 .hero-intro {
-  display: flex;
   flex-direction: column;
 }
 
 
 /* about me section start */
 #about-me {
-  display: flex;
   flex-direction: column;
 }
 
@@ -96,7 +103,6 @@ header nav ul li {
 /* portfolio section start */
 
 .flex-container {
-  display: flex;
   flex-wrap: wrap;
   margin-bottom: 80px;
   padding: 8px 10px;
@@ -116,7 +122,6 @@ header nav ul li {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  display: flex;
 }
 
 .project div {
@@ -153,12 +158,10 @@ header nav ul li {
   background-image: url("../images/02-portfolio-5.jpg");
 }
 
-/* end portfolio project images */
 
 /* contact me section start */
 
 address {
-  display: flex;
   flex-wrap: wrap;
 }
 
@@ -166,7 +169,7 @@ address a {
   margin-right: 40px;
 }
 
-/* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
+/* media query for smaller desktop screens and smaller */
 @media screen and (max-width: 980px) {
 header nav ul {
   margin-right: 0px;
@@ -184,7 +187,7 @@ section {
   text-align: center;
 }
 
-/* MEDIA QUERY FOR TABLETS AND SMALLER */
+/* media query for tablets and smaller */
 @media screen and (max-width: 768px) {
   address {
     display: flex;
@@ -198,11 +201,10 @@ section {
 
   .tic, .calculator, .weather, .run {
     flex-basis: 100%;
-  }
-  
+  }  
 
-}
-/* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
+  }
+/* media query for mobile phone and smaller */
 @media screen and (max-width: 575px) {
   section {
     margin: 0px 50px;
@@ -216,6 +218,5 @@ section {
   h1 {
     margin-top: 25px;
   }
-
-}
-}
+  }
+  }
