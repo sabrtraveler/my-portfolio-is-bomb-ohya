@@ -63,8 +63,7 @@ header nav ul,
 #about-me,
 .flex-container,
 .project,
-address
-{
+address {
   display: flex;
 }
 
@@ -86,7 +85,6 @@ header nav ul li {
 .hero-intro {
   flex-direction: column;
 }
-
 
 /* about me section start */
 #about-me {
@@ -110,12 +108,13 @@ header nav ul li {
 
 .meditation {
   flex-basis: 100%;
-  
 }
 
-.tic, .calculator, .weather, .run {
+.tic,
+.calculator,
+.covid,
+.run {
   flex-basis: 50%;
-  
 }
 
 .project {
@@ -128,14 +127,11 @@ header nav ul li {
   background-color: var(--primary-color);
   padding: 30px 30px;
   margin-bottom: 200px;
-  
-
 }
 
 .meditation div {
   margin-bottom: 300px;
 }
-
 
 /* portfolio project images */
 .meditation {
@@ -150,14 +146,13 @@ header nav ul li {
   background-image: url("../images/02-portfolio-3.jpg");
 }
 
-.weather {
+.covid {
   background-image: url("../images/02-portfolio-4.jpg");
 }
 
 .run {
   background-image: url("../images/02-portfolio-5.jpg");
 }
-
 
 /* contact me section start */
 
@@ -171,52 +166,54 @@ address a {
 
 /* media query for smaller desktop screens and smaller */
 @media screen and (max-width: 980px) {
-header nav ul {
-  margin-right: 0px;
-}
-
-h3 {
-  font-size: 30px;
- }
-
-section {
-  margin: 0px 100px;
-}
-
-.section-heading {
-  text-align: center;
-}
-
-/* media query for tablets and smaller */
-@media screen and (max-width: 768px) {
-  address {
-    display: flex;
-    flex-direction: column;
+  header nav ul {
+    margin-right: 0px;
   }
 
-  address a {
-    padding: 15px 0px;
+  h3 {
+    font-size: 30px;
+  }
+
+  section {
+    margin: 0px 100px;
+  }
+
+  .section-heading {
     text-align: center;
   }
 
-  .tic, .calculator, .weather, .run {
-    flex-basis: 100%;
-  }  
+  /* media query for tablets and smaller */
+  @media screen and (max-width: 768px) {
+    address {
+      display: flex;
+      flex-direction: column;
+    }
 
-  }
-/* media query for mobile phone and smaller */
-@media screen and (max-width: 575px) {
-  section {
-    margin: 0px 50px;
-  }
+    address a {
+      padding: 15px 0px;
+      text-align: center;
+    }
 
-  header {
-    display: flex;
-    flex-direction: column;
+    .tic,
+    .calculator,
+    .covid,
+    .run {
+      flex-basis: 100%;
+    }
   }
+  /* media query for mobile phone and smaller */
+  @media screen and (max-width: 575px) {
+    section {
+      margin: 0px 50px;
+    }
 
-  h1 {
-    margin-top: 25px;
+    header {
+      display: flex;
+      flex-direction: column;
+    }
+
+    h1 {
+      margin-top: 25px;
+    }
   }
-  }
-  }
+}
