@@ -113,7 +113,9 @@ header nav ul li {
 .tic,
 .calculator,
 .covid,
-.run {
+.run,
+.weather,
+.quiz {
   flex-basis: 50%;
 }
 
@@ -154,6 +156,13 @@ header nav ul li {
   background-image: url("../images/02-portfolio-5.jpg");
 }
 
+.weather {
+  background-image: url("../images/02-portfolio-6.jpg");
+}
+
+.quiz {
+  background-image: url("../images/02-portfolio-7.jpg");
+}
 /* contact me section start */
 
 address {
